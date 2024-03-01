@@ -143,6 +143,10 @@ EEinJet: $(PYTHIA) $$@.cc
 	$(CXX) $@.cc -o $@ -w -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR $(CXX_COMMON) $(FASTJET3_INCLUDE) $(FASTJET3_LIB) $(ROOT_LIB)\
 	 `$(ROOT_CONFIG) --cflags --glibs`
 
+PPinJet: $(PYTHIA) $$@.cc
+	$(CXX) $@.cc -o $@ -w -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR $(CXX_COMMON) $(FASTJET3_INCLUDE) $(FASTJET3_LIB) $(ROOT_LIB)\
+	 $(ROOT_CONFIG) --cflags --glibs`
+
 2PCorr: $(PYTHIA) $$@.cc
 	$(CXX) $@.cc -o $@ -w -D_LIBCPP_ENABLE_CXX17_REMOVED_AUTO_PTR $(CXX_COMMON) $(FASTJET3_INCLUDE) $(FASTJET3_LIB) $(ROOT_LIB)\
 	 `$(ROOT_CONFIG) --cflags --glibs`
